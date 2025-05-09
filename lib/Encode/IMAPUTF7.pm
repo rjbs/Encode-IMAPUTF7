@@ -79,6 +79,8 @@ sub decode($$;$) {
 1;
 __END__
 
+=encoding utf8
+
 =head1 NAME
 
 Encode::IMAPUTF7 - modification of UTF-7 encoding for IMAP
@@ -88,7 +90,7 @@ Encode::IMAPUTF7 - modification of UTF-7 encoding for IMAP
   use Encode qw/encode decode/;
 
   print encode('IMAP-UTF-7', 'Répertoire');
-  print decode('IMAP-UTF-7', R&AOk-pertoire');
+  print decode('IMAP-UTF-7', 'R&AOk-pertoire');
 
 =head1 ABSTRACT
 
