@@ -2,7 +2,7 @@ package Encode::IMAPUTF7;
 use strict;
 use warnings;
 
-use base qw(Encode::Encoding);
+use parent qw(Encode::Encoding);
 
 # ABSTRACT: modification of UTF-7 encoding for IMAP
 
