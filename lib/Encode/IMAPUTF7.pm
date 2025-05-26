@@ -13,10 +13,11 @@ use MIME::Base64;
 
 =head1 SYNOPSIS
 
-  use Encode qw/encode decode/;
+    use Encode qw/encode decode/;
+    use Encode::IMAPUTF7;
 
-  print encode('IMAP-UTF-7', 'Répertoire');
-  print decode('IMAP-UTF-7', 'R&AOk-pertoire');
+    print encode('IMAP-UTF-7', 'Répertoire');
+    print decode('IMAP-UTF-7', 'R&AOk-pertoire');
 
 =head1 ABSTRACT
 
@@ -123,6 +124,5 @@ sub decode($$;$) {
     $_[1] = '' if $chk;
     return $str;
 }
-
 
 1;
