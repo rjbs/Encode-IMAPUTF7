@@ -2,15 +2,14 @@ package Encode::IMAPUTF7;
 use strict;
 use warnings;
 
-no warnings 'redefine';
 use base qw(Encode::Encoding);
 
 # ABSTRACT: modification of UTF-7 encoding for IMAP
 
 __PACKAGE__->Define('IMAP-UTF-7', 'imap-utf-7');
 
+use Encode ();
 use MIME::Base64;
-use Encode;
 
 =head1 SYNOPSIS
 
@@ -70,7 +69,7 @@ and Chinese text: C<~peter/mail/&ZeVnLIqe-/&U,BTFw->
 my $re_asis =     qr/(?:[\x20-\x25\x27-\x7e])/; # printable US-ASCII except "&" represents itself
 my $re_encoded = qr/(?:[^\x20-\x7e])/; # Everything else are represented by modified base64
 
-my $e_utf16 = find_encoding("UTF-16BE");
+my $e_utf16 = Encode::find_encoding("UTF-16BE");
 
 sub needs_lines { 1 };
 
