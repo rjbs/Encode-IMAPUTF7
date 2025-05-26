@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.07      2025-05-25 21:55:49-04:00 America/New_York
         - mostly just packaging updates, documentation fixing
         - bump minimum perl to v5.12 (ca. 2010)
 
